@@ -25,6 +25,10 @@ class Box {
 
     }
 
+    bd() {
+        return this.body;
+    }
+
     islife() {
         if (this.live < 0) {
             this.live = this.live - 100;
@@ -33,8 +37,5 @@ class Box {
         }
         return true;
     }
-
-
-
 
 }
