@@ -12,9 +12,10 @@ let boxImg;
 let bkgImg;
 
 function preload() {
-    dotImg = loadImage('./images/dot.png');
-    boxImg = loadImage('./images/equals.png');
-    bkgImg = loadImage('./images/skyBackground.png');
+    dotImg = loadImage('./images/coctel.png');
+    boxImg = loadImage('./images/pig.png');
+    bkgImg = loadImage('./images/fondo.png');
+    capucho = loadImage('./images/capucho.png')
 }
 
 function setup() {
@@ -23,11 +24,11 @@ function setup() {
     world = engine.world;
     ground = new Ground(width / 2, height - 10, width, 20);
     for (let i = 0; i < 3; i++) {
-        boxes[i] = new Box(450, 300 - i * 75, 84, 100);
+        boxes[i] = new Box(450, 300 - i * 75, 50, 67);
     }
     bird = new Bird(150, 300, 25);
 
-    slingshot = new SlingShot(150, 300, bird.body);
+    slingshot = new SlingShot(150, 290, bird.body);
 
     const mouse = Mouse.create(canvas.elt);
     const options = {
@@ -56,7 +57,9 @@ function mouseReleased() {
 }
 
 function draw() {
+
     background(bkgImg);
+    image(capucho, 75, 265, 90, 120);
     Matter.Engine.update(engine);
     ground.show();
     for (let box of boxes) {
