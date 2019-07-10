@@ -12,9 +12,9 @@ let boxImg;
 let bkgImg;
 
 function preload() {
-    dotImg = loadImage('images/dot.png');
-    boxImg = loadImage('images/equals.png');
-    bkgImg = loadImage('images/skyBackground.png');
+    dotImg = loadImage('./images/dot.png');
+    boxImg = loadImage('./images/equals.png');
+    bkgImg = loadImage('./images/skyBackground.png');
 }
 
 function setup() {
