@@ -1,4 +1,5 @@
 class Box {
+    live = 400;
     constructor(x, y, w, h) {
         const options = {
             restitution: 0.5
@@ -22,6 +23,15 @@ class Box {
         image(boxImg, 0, 0, this.w, this.h);
         pop();
 
+    }
+
+    islife() {
+        if (this.live < 0) {
+            this.live = this.live - 100;
+        } else {
+            return false;
+        }
+        return true;
     }
 
 
